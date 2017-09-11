@@ -2,7 +2,7 @@ FROM alpine
 
 ENV CASSANDRA_VERSION=3.11.0
 
-RUN apk add --update --no-cache wget openjdk8-jre
+RUN apk add --no-cache wget openjdk8-jre
 
 RUN mkdir /opt && cd /opt \
  && wget -q http://archive.apache.org/dist/cassandra/${CASSANDRA_VERSION}/apache-cassandra-${CASSANDRA_VERSION}-bin.tar.gz \
